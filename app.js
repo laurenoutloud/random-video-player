@@ -11,9 +11,8 @@ async function getRandomWord() {
 async function getRandomVideoID() {
     const randomWord = await getRandomWord();
 
-    let response = await fetch(`https://www.googleapis.com/youtube/v3/search?&type=video&part=snippet&q=${randomWord}&maxResults=50&key=${apiKey}`);
+    let response = await fetch(`https://www.googleapis.com/youtube/v3/search?&type=video&part=snippet&q=${randomWord}&maxResults=5&key=${apiKey}`);
     let data = await response.json();
-    console.log(data)
     let videos = data.items;
     const randomVideoID = videos[Math.floor(Math.random() * videos.length)].id.videoId;
     return randomVideoID;

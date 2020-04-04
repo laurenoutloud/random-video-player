@@ -9,7 +9,10 @@
 <body>
     <h1>Random Video Player</h1>
     <div class="container">
-        <iframe id="video-player" class="video-player" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video-wrapper">
+            <iframe id="video-player" class="video-player" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <button class="randomize-button" type="button" onclick="showRandomVideo()">Randomize!</button>
     </div>
 <script src="app.js"></script>
 </body>
